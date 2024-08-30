@@ -4,11 +4,13 @@ class UserProfile extends Component {
     constructor(props) {
         super(props);
         this.state = { name: 'Alex' };
+
+        this.changeName = this.changeName.bind(this);
     }
 
     // Incorrect function
     changeName() {
-        this.setState = 'Charlie';
+        this.setState({name: 'Charlie'});
     }
 
     render() {
@@ -21,3 +23,5 @@ class UserProfile extends Component {
         );
     }
 }
+
+export default UserProfile
